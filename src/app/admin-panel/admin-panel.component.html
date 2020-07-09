@@ -1,0 +1,6 @@
+<app-nav></app-nav>
+<app-alert></app-alert>
+<button class="btn btn-danger" (click)="authService.logout()">Log out!</button>
+<button class="btn btn-success" (click)="authService.scrape()">Scrape</button>
+<button class="btn btn-danger" (dblclick)="authService.deleteAll()"
+        (click)="alertService.setAlert('info', 'You must double click Delete all button.')">Delete all articles!</button>

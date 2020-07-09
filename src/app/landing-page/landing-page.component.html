@@ -1,0 +1,49 @@
+<app-nav></app-nav>
+<div id="topAd" class="col-sm-12">
+  <!-- TODO: Add topAd-->
+</div>
+
+<div class="row col-sm-12">
+  <div id="ad1" class="col-sm-3">
+    <!-- TODO: Add ad1-->
+  </div>
+
+  <div id="articles" class="col-sm-6">
+    <h2>Știri din județul Suceava:</h2>
+    <ng-container *ngFor="let article of articles let i = index" >
+      <div *ngIf="i < limit" class="article row">
+        <div class="col-sm-12 col-md-3">
+          <a class="article-link" [routerLink]="['/articol', article._id]">
+            <img src="{{article.imgSrc}}" class="article-img"/>
+          </a>
+        </div>
+        <div class="col-sm-12 offset-md-1 col-md-8">
+          <h1 class="article-title">
+            <a class="article-link" [routerLink]="['/articol', article._id]">{{article.title}}</a>
+          </h1>
+          <h2 class="article-preview">
+            <a class="article-link-preview" [routerLink]="['/articol', article._id]">
+              {{article.preview}}
+            </a>
+          </h2>
+        </div>
+        <div class="row col-sm-12 mt-3">
+          <h4 class="col-sm-12 col-md-4 article-source">Știre de pe: <span [innerHTML]="article.source"></span></h4>
+          <h4 class="col-sm-12 col-md-8 text-right">{{article.date}}</h4>
+        </div>
+        <hr class="col-sm-12">
+      </div>
+    </ng-container>
+  </div>
+
+  <div id="ad2" class="col-sm-3">
+    <!-- TODO: Add ad2-->
+  </div>
+
+  <div *ngIf="moreNews" class="col-sm-12 text-center">
+    <button class="btn btn-primary mb-3" (click)="increaseLimit()">Mai multe știri</button>
+  </div>
+</div>
+
+<app-footer></app-footer>
+

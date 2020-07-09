@@ -1,0 +1,23 @@
+.btn-primary {
+  background-color: #415347;
+  border-color: #415347;
+}
+
+.btn-primary:hover {
+  background-color: #416810;
+}
+
+.btn-primary:focus {
+  background-color: #416810;
+  border-color: #415347;
+  box-shadow: 0 0 0 0.2rem rgba(65,83,71, 0.5);
+}
+
+.form-control:focus {
+  border-color: #415347;
+  box-shadow: 0 0 0 0.2rem rgba(65,83,71, 0.5);
+}
+
+.form-signin {
+  margin-top: 30px;
+}

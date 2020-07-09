@@ -1,0 +1,89 @@
+.navbar {
+  padding: 10px 75px 5px 75px;
+}
+
+@keyframes bg {
+  0% {
+    background-size:    0 3px,
+    3px 0,
+    0 3px,
+    3px 0;
+  }
+  25% {
+    background-size:    100% 3px,
+    3px 0,
+    0 3px,
+    3px 0;
+  }
+  50% {
+    background-size:    100% 3px,
+    3px 100%,
+    0 3px,
+    3px 0;
+  }
+  75% {
+    background-size:    100% 3px,
+    3px 100%,
+    100% 3px,
+    3px 0;
+  }
+  100% {
+    background-size:    100% 3px,
+    3px 100%,
+    100% 3px,
+    3px 100%;
+  }
+}
+.logo {
+  padding: 1em 1em 1px;
+  color: #415347;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Arial Black";
+}
+
+.quote {
+  padding: 1em 1em 1px;
+  color: #415347;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Arial Black";
+  float: right;
+}
+
+h1 {
+  color: #415347;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+a > h1:hover {
+  color: #416810;
+}
+
+.logo:hover {
+  background-repeat: no-repeat;
+  background-image:   linear-gradient(to right,  #415347 100%, #415347 100%),
+  linear-gradient(to bottom, #415347 100%, #415347 100%),
+  linear-gradient(to right, #415347 100%, #415347 100%),
+  linear-gradient(to bottom, #415347 100%, #415347 100%);
+  background-size:    100% 3px,
+  3px 100%,
+  100% 3px,
+  3px 100%;
+  background-position:    0 0,
+  100% 0,
+  100% 100%,
+  0 100%;
+  animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+}
+
+.favicon img {
+  width: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .favicon {
+    margin-left: 50px;
+  }
+}

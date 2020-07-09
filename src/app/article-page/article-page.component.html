@@ -1,0 +1,25 @@
+<div style="min-height: 90vh">
+  <app-nav></app-nav>
+  <mat-card class="wrapper offset-3 col-sm-6 text-center">
+    <mat-card-title>{{article.title}}</mat-card-title>
+    <mat-card-subtitle class="mt-2 col-sm-12">
+      <span class="col-sm-6">{{article.date}}</span>
+    </mat-card-subtitle>
+    <mat-card-content class="row mt-4">
+      <a href="{{article.link}}" target="_blank">
+        <img mat-card-image class="article-image" src="{{article.imgSrc}}" alt="{{article.title}}">
+      </a>
+      <p class="col-sm-12">
+        {{article.content}}
+        <br><br>
+        <span class="col-sm-6 text-left">Sursa: <span [innerHTML]="article.source"></span></span>
+        <br>
+        Știrea completă o găsiți accesând următorul <a href="{{article.link}}" target="_blank">link</a>.
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="col-sm-12 text-center">
+      <button class="btn btn-primary mb-3" [routerLink]="['']">Mai multe știri</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<app-footer></app-footer>

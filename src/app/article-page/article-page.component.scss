@@ -1,0 +1,45 @@
+.wrapper {
+  margin: 30px auto;
+}
+
+.article-image {
+  width: 25vw;
+  max-height: 350px;
+}
+
+.btn-primary {
+  background-color: #415347;
+  border-color: #415347;
+}
+
+.btn-primary:hover {
+  background-color: #416810;
+}
+
+.btn-primary:focus {
+  background-color: #416810;
+  border-color: #415347;
+  box-shadow: 0 0 0 0.2rem rgba(65,83,71, 0.5);
+}
+
+.btn-primary:active {
+  background-color: #416810 !important;
+  border-color: #415347 !important;
+  box-shadow: 0 0 0 0.2rem rgba(65,83,71, 0.5) !important;
+}
+
+.mat-card-header-text {
+  width: 100% !important;
+}
+
+@media screen and (max-width: 700px) {
+  .article-image {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .article-image {
+    width: 75vw;
+  }
+}

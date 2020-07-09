@@ -1,0 +1,16 @@
+<div class="text-center offset-4 col-sm-4 p-5 mt-5">
+  <form class="form-signin" [formGroup]="login">
+  <img class="mb-4" src="./assets/favicon.png" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Știri Suceava - Admin Log In</h1>
+  <label for="inputEmail" class="sr-only">Username</label>
+  <input type="text" id="inputEmail" class="form-control mb-2" placeholder="Username"
+         formControlName="user" required autofocus style="margin-top: 30px">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control mb-2"
+         placeholder="Password" formControlName="password" required>
+  <button class="btn btn-lg btn-primary btn-block mt-5" (click)="loginUser()">Log In</button>
+  </form>
+  <div class="text-center font-weight-bold" style="margin-top: 100px">
+    <h4>2020 © Știri Suceava</h4>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.article {
+  padding: 2px;
+  margin-top: 30px;
+}
+
+.article-img {
+  width: 200px;
+}
+
+.article-link {
+  color: #415347;
+}
+
+.article-link:hover {
+  text-decoration: none;
+  color: #416810;
+}
+
+.article-link-preview {
+  color: #000;
+}
+
+.article-link-preview:hover {
+  text-decoration: none;
+  color: #416810;
+}
+
+#articles {
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background-color: #415347;
+  border-color: #415347;
+}
+
+.btn-primary:hover {
+  background-color: #416810;
+}
+
+.btn-primary:focus {
+  background-color: #416810;
+  border-color: #415347;
+  box-shadow: 0 0 0 0.2rem rgba(65,83,71, 0.5);
+}
+
+.btn-primary:active {
+  background-color: #416810 !important;
+  border-color: #415347 !important;
+  box-shadow: 0 0 0 0.2rem rgba(65,83,71, 0.5) !important;
+}
