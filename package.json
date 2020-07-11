@@ -30,6 +30,8 @@
     "@nguniversal/express-engine": "^10.0.1",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",

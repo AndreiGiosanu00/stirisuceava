@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {LoadingService} from "../services/loading.service";
-import {AuthService} from "../services/auth.service";
-import {Meta, Title} from "@angular/platform-browser";
+import {HttpClient} from '@angular/common/http';
+import {LoadingService} from '../services/loading.service';
+import {Meta, Title} from '@angular/platform-browser';
 
 declare let $: any;
 
@@ -19,7 +18,6 @@ export class LandingPageComponent implements OnInit {
 
   constructor(private http: HttpClient,
               public loadingService: LoadingService,
-              public authService: AuthService,
               private title: Title,
               private meta: Meta) {
     this.loadingService.showLoading();
@@ -32,7 +30,9 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.title.setTitle('Știri Suceava - Aici găsești toate știrile din Suceava!');
-    this.meta.updateTag({ name: 'description', content: 'Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.' });
+    this.meta.updateTag({ name: 'description', content: 'Știri Suceava este o platformă de știri prin care poți accesa ' +
+        'toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma ' +
+        'oferă știri verificate.' });
   }
 
   filterArticles() {
@@ -43,8 +43,22 @@ export class LandingPageComponent implements OnInit {
     });
 
     this.shuffleArray(this.articles);
-    this.articles.sort((a, b) => b.date.localeCompare(a.date));
+    this.articles.sort((a, b) => {
+      if (this.stringToDate(b) > this.stringToDate(a)) {
+        return 1
+      }
+      return -1;
+    });
     this.loadingService.hideLoading();
+  }
+
+  stringToDate(article: any) {
+    const months = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie',
+      'octombrie', 'noiembrie', 'decembrie'];
+    let dateElements = article.date.split(' ', 3);
+    let date = (months.indexOf(dateElements[0]) + 1) + '/' + dateElements[1].slice(0, -1) + '/' + dateElements[2];
+    let resultDate = new Date(date);
+    return resultDate;
   }
 
   increaseLimit() {
@@ -55,7 +69,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   shuffleArray(array: any) {
-    var m = array.length, t, i;
+    let m = array.length, t, i;
 
     // While there remain elements to shuffle
     while (m) {
