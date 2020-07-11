@@ -12,7 +12,7 @@
     "serve:ssr": "node dist/stirisuceava-fe/server/main.js",
     "build:ssr": "ng build --prod && ng run stirisuceava-fe:server:production",
     "prerender": "ng run stirisuceava-fe:prerender",
-    "deploy": "ng build --prod && npm run build:ssr && gcloud app deploy"
+    "deploy": "npm run build:ssr && gcloud app deploy"
   },
   "private": true,
   "dependencies": {
