@@ -37,9 +37,10 @@ export class LandingPageComponent implements OnInit {
 
   filterArticles() {
     this.articles.forEach((article) => {
-      if (article.imgSrc.includes('googleusercontent.com')) {
+      if (article.imgSrc.includes('googleusercontent.com') || article.imgSrc.includes('https://corporatebusinessevents.ro/events/wp-content/uploads/2017/03/Monitorul.jpg')) {
         article.imgSrc = './assets/logo.png';
       }
+      article.link.slice(0, -1);
     });
 
     this.shuffleArray(this.articles);

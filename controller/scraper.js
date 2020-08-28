@@ -95,7 +95,7 @@ exports.getMonitorulSuceavaNews = async function() {
                     }
 
                     if (!result.imgSrc) {
-                        result.imgSrc = "https://corporatebusinessevents.ro/events/wp-content/uploads/2017/03/Monitorul.jpg";
+                        result.imgSrc = "./assets/logo.png";
                     }
 
                     const months = ["ianuarie", "februarie", "martie","aprilie", "mai", "iunie", "iulie", "august", "septembrie",

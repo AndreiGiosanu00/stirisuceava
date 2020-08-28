@@ -34,7 +34,8 @@ export function app() {
   // Setup Cors
   const cors = require('cors');
   const whitelist = ['http://localhost:4000', 'http://localhost:4200', 'http://localhost:8080',
-                      'https://stirisuceava.ro', 'http://stirisuceava.ro', 'https://www.stirisuceava.ro', 'http://www.stirisuceava.ro'];
+                      'https://stirisuceava.ro', 'http://stirisuceava.ro', 'https://www.stirisuceava.ro', 'http://www.stirisuceava.ro',
+                      'http://80.240.31.216', 'https://80.240.31.216'];
   server.use(cors({
     origin: function(origin, callback) {
       // allow requests with no origin
