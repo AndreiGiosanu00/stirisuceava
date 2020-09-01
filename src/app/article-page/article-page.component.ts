@@ -28,7 +28,7 @@ export class ArticlePageComponent implements OnInit, AfterViewInit {
     loadingService.showLoading();
     let params = new HttpParams().append('id', this.route.snapshot.paramMap.get('id'));
 
-    http.get('http://stirisuceava.ro/api/article', {params: params}).subscribe((res: any) => {
+    http.get('https://stirisuceava.ro/api/article', {params: params}).subscribe((res: any) => {
       this.article = res.article;
       loadingService.hideLoading();
 

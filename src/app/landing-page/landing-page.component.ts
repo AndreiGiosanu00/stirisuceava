@@ -21,7 +21,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
               private title: Title,
               private meta: Meta) {
     this.loadingService.showLoading();
-    http.get('http://stirisuceava.ro/api/articles').subscribe((res: any) => {
+    http.get('https://stirisuceava.ro/api/articles').subscribe((res: any) => {
       this.articles = res;
       this.moreNews = this.articles.length > 10;
       this.filterArticles();
