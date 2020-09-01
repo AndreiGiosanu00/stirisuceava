@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {LoadingService} from "../services/loading.service";
@@ -9,8 +9,7 @@ import {Meta, Title} from "@angular/platform-browser";
   templateUrl: './article-page.component.html',
   styleUrls: ['./article-page.component.scss']
 })
-export class ArticlePageComponent implements OnInit {
-
+export class ArticlePageComponent implements OnInit, AfterViewInit {
   article = {
     title: '',
     imgSrc: '',
@@ -24,11 +23,12 @@ export class ArticlePageComponent implements OnInit {
               private http: HttpClient,
               private loadingService: LoadingService,
               private title: Title,
-              private meta: Meta) {
+              private meta: Meta,
+              private elementRef: ElementRef) {
     loadingService.showLoading();
     let params = new HttpParams().append('id', this.route.snapshot.paramMap.get('id'));
 
-    http.get('https://stirisuceava.ro/api/article', {params: params}).subscribe((res: any) => {
+    http.get('http://stirisuceava.ro/api/article', {params: params}).subscribe((res: any) => {
       this.article = res.article;
       loadingService.hideLoading();
 
@@ -43,5 +43,13 @@ export class ArticlePageComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    // Ad push
+    let adPush = document.createElement("script");
+    adPush.type = "text/javascript";
+    adPush.src = "//p411500.clksite.com/adServe/banners?tid=411500_807434_7";
+    this.elementRef.nativeElement.appendChild(adPush);
+  }
 
 }

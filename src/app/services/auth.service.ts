@@ -26,7 +26,7 @@ export class AuthService {
     };
 
     this.loadingService.showLoading();
-    this.http.post('https://stirisuceava.ro/api/login', body).subscribe((res: any) => {
+    this.http.post('http://stirisuceava.ro/api/login', body).subscribe((res: any) => {
       this.cookieService.set('authToken', 'Bearer ' + res.token, 7200 * 1000); // 2 hours
       this.isAuth = true;
       this.router.navigate(['admin-panel']);
@@ -53,7 +53,7 @@ export class AuthService {
   scrape() {
     let headers = new HttpHeaders().set('Authorization', this.cookieService.get('authToken'));
     this.loadingService.showLoading();
-    this.http.post('https://stirisuceava.ro/api/scrape', null, {headers: headers}).subscribe((res: any) => {
+    this.http.post('http://stirisuceava.ro/api/scrape', null, {headers: headers}).subscribe((res: any) => {
       this.alertService.setAlert('success', res.response);
       this.loadingService.hideLoading();
     }, (err: any) => {
@@ -65,7 +65,7 @@ export class AuthService {
   deleteAll() {
     let headers = new HttpHeaders().set('Authorization', this.cookieService.get('authToken'));
     this.loadingService.showLoading();
-    this.http.post('https://stirisuceava.ro/api/delete-all', null, {headers: headers}).subscribe((res: any) => {
+    this.http.post('http://stirisuceava.ro/api/delete-all', null, {headers: headers}).subscribe((res: any) => {
       this.alertService.setAlert('success', res.response);
       this.loadingService.hideLoading();
     }, (err: any) => {
