@@ -4,7 +4,11 @@ Data scraping news platform. You find the app at https://stirisuceava.ro
 
 ## Development server (Angular Universal)
 
-Run `npm run serve:ssr` for a dev server. Navigate to `http://localhost:4000/`. The app will automatically reload if you change any of the source files.
+Run `npm run serve:ssr` for a dev server. Navigate to `http://localhost:4000/`.
+
+## Development server (Angular - Frontend part)
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. You need to run the development server (Angular Universal) to have access to the backend API.
 
 ## Code scaffolding
 
