@@ -16,4 +16,3 @@ exports.isAuthorized = function (req, res, next) {
         res.status(500).json({'error': 'Not Authorized! (missing headers)'});
     }
 };
-////sdfsdfsd
