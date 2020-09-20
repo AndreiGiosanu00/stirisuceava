@@ -1,10 +1,14 @@
-# StirisuceavaFe
+# Stiri Suceava
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+Data scraping news platform. You find the app at https://stirisuceava.ro
 
-## Development server
+## Development server (Angular Universal)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run serve:ssr` for a dev server. Navigate to `http://localhost:4000/`.
+
+## Development server (Angular - Frontend part)
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. You need to run the development server (Angular Universal) to have access to the backend API.
 
 ## Code scaffolding
 
@@ -13,6 +17,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Build Server
+
+Run `npm run build:ssr` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
