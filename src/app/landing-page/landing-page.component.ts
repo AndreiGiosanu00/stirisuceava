@@ -20,7 +20,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
               public loadingService: LoadingService,
               private title: Title,
               private meta: Meta) {
-    this.loadingService.showLoading();
+    loadingService.showLoading();
     http.get('https://stirisuceava.ro/api/articles').subscribe((res: any) => {
       this.articles = res;
       this.moreNews = this.articles.length > 10;

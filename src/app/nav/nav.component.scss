@@ -51,6 +51,14 @@
   float: right;
 }
 
+.buttons-panel {
+  padding: 1em 1em 1px;
+  color: #415347;
+  font-size: 20px;
+  font-family: "Arial";
+  float: right;
+}
+
 h1 {
   color: #415347;
   font-size: 25px;
@@ -86,4 +94,8 @@ a > h1:hover {
   .favicon {
     margin-left: 50px;
   }
+}
+
+.btn {
+  margin-left: 15px;
 }
