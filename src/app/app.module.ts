@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AlertComponent } from './alert/alert.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatTableModule} from '@angular/material/table';
     NavComponent,
     LoadingSpinnerComponent,
     FooterComponent,
-    AlertComponent
+    AlertComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'stirisuceava-fe'}),

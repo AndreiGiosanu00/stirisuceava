@@ -10,7 +10,7 @@ declare let $: any;
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent implements OnInit, AfterViewInit {
+export class LandingPageComponent implements OnInit {
 
   articles = [];
   limit = 10;
@@ -33,26 +33,6 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
     this.meta.updateTag({ name: 'description', content: 'Știri Suceava este o platformă de știri prin care poți accesa ' +
         'toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma ' +
         'oferă știri verificate.' });
-  }
-
-  ngAfterViewInit(): void {
-   /* // Ad banner
-    let adBanner = document.createElement("script");
-    adBanner.type = "text/javascript";
-    adBanner.src = "//p411500.clksite.com/adServe/banners?tid=411500_807434_8&size=7";
-    $('#topAd').append(adBanner);
-
-    // Ad slider1
-    let adSlider1 = document.createElement("script");
-    adSlider1.type = "text/javascript";
-    adSlider1.src = "//p411500.clksite.com/adServe/banners?tid=411500_807434_3&type=slider&side=left&size=9&position=bottom&animate=off";
-    $('#adFirst').append(adSlider1);
-
-    // Ad slider2
-    let adSlider2 = document.createElement("script");
-    adSlider2.type = "text/javascript";
-    adSlider2.src = "//p411500.clksite.com/adServe/banners?tid=411500_807434_4&type=slider&side=right&size=9&position=bottom&animate=off";
-    $('#adSecond').append(adSlider2);*/
   }
 
   filterArticles() {
