@@ -1,11 +1,15 @@
 <app-nav></app-nav>
-<div id="topAd" class="offset-3 col-sm-8 offset-md-5 col-md-3 mt-2"></div>
+<div class="offset-3 col-sm-8 offset-md-5 col-md-3 mt-2">
+
+</div>
 
 <div class="row col-sm-12">
+
   <div id="adFirst" class="col-sm-3"></div>
 
   <div id="articles" class="col-sm-6">
     <h2>Știri din județul Suceava:</h2>
+    <img src="../../assets/adback.jpg" style="width: 500px"/>
     <ng-container *ngFor="let article of articles let i = index" >
       <div *ngIf="i < limit" class="article row">
         <div class="col-sm-12 col-md-3">

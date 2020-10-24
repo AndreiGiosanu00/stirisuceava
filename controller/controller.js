@@ -41,8 +41,9 @@ router.get("/api/articles", function(req, res) {
   });
 });
 
-router.post("/api/delete-article", authGuard.isAuthorized, function(req, res) {
-  Article.deleteOne({_id: req.body.id}, function(err, doc) {
+router.delete("/api/delete-article/:id", authGuard.isAuthorized, function(req, res) {
+  console.log('delete one article!');
+  Article.Remove({_id: req.params.id}, function(err, doc) {
     if (err) {
       res.send(err);
     } else {
@@ -51,12 +52,32 @@ router.post("/api/delete-article", authGuard.isAuthorized, function(req, res) {
   });
 });
 
-router.post("/api/delete-all", authGuard.isAuthorized, function (req, res) {
+router.delete("/api/delete-all", authGuard.isAuthorized, function (req, res) {
   Article.remove({}, function(err, doc) {
     if (err) {
       res.send(err);
     } else {
       res.json({'response': 'All articles have been deleted!'});
+    }
+  });
+});
+
+router.put("/api/edit-article", authGuard.isAuthorized, function (req, res) {
+  Article.edit({
+    _id: req.body.id,
+    title: req.body.title,
+    link: req.body.link,
+    preview: req.body.preview,
+    date: req.body.date,
+    imgSrc: req.body.imgSrc,
+    source: req.body.source,
+    content: req.body.content
+  }, function (err, doc) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.json({'response': 'Article edited!'});
+      res.redirect("/api/articles");
     }
   });
 });

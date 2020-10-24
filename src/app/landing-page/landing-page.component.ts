@@ -36,7 +36,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // Ad banner
+   /* // Ad banner
     let adBanner = document.createElement("script");
     adBanner.type = "text/javascript";
     adBanner.src = "//p411500.clksite.com/adServe/banners?tid=411500_807434_8&size=7";
@@ -52,7 +52,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
     let adSlider2 = document.createElement("script");
     adSlider2.type = "text/javascript";
     adSlider2.src = "//p411500.clksite.com/adServe/banners?tid=411500_807434_4&type=slider&side=right&size=9&position=bottom&animate=off";
-    $('#adSecond').append(adSlider2);
+    $('#adSecond').append(adSlider2);*/
   }
 
   filterArticles() {

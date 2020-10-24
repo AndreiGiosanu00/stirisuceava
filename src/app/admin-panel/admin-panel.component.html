@@ -26,7 +26,7 @@
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef> Sterge </th>
       <td mat-cell *matCellDef="let row" style="padding-right: 0 !important">
-        <button class="btn btn-danger btn-sm action-button" style="border-radius: 0;">
+        <button class="btn btn-danger btn-sm action-button" style="border-radius: 0;" (click)="authService.deleteArticle(row._id)">
           <div>Sterge articol</div>
         </button>
       </td>
@@ -35,7 +35,7 @@
     <ng-container matColumnDef="edit">
       <th mat-header-cell *matHeaderCellDef> Editeaza </th>
       <td mat-cell *matCellDef="let row">
-        <button class="btn btn-primary btn-sm action-button" style="border-radius: 0;">
+        <button class="btn btn-primary btn-sm action-button" style="border-radius: 0;" (click)="authService.editArticle()">
           <div>Editeaza articol</div>
         </button>
       </td>

@@ -72,4 +72,21 @@ export class AuthService {
       this.alertService.setAlert('error', err.error);
     });
   }
+
+  deleteArticle(id: any) {
+    let headers = new HttpHeaders().set('Authorization', this.cookieService.get('authToken'));
+    this.loadingService.showLoading();
+    this.http.delete('/api/delete-article', {params: {id: id}, headers: headers}).subscribe((data: any) =>{
+      console.log(data);
+      this.loadingService.hideLoading();
+      this.alertService.setAlert('info', data.message);
+    }, (err: any) => {
+      this.alertService.setAlert('error', err.error);
+      setTimeout(() => this.loadingService.hideLoading(), 3000);
+    });
+  }
+
+  editArticle() {
+
+  }
 }

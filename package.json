@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "node dist/stirisuceava-fe/server/main.js",
     "build": "ng build",
+    "serve:dev": "ng serve --proxy-config src/proxy.config.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
