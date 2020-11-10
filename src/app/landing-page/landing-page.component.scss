@@ -53,5 +53,15 @@
 .adStiriSuceava {
   text-align: center;
   padding: 15px;
-  background-color: rgba(256, 256, 0, 0.2);
+  background-color: rgba(65,83,71, 0.2);
+  color: #415347;
+}
+
+.adStiriSuceava a {
+  color: #416810;
+  border-color: #415347;
+}
+
+.adStiriSuceava a:hover {
+  color: #416810;
 }

@@ -32,6 +32,22 @@
   width: 100% !important;
 }
 
+.adStiriSuceava {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(65,83,71, 0.2);
+  color: #415347;
+}
+
+.adStiriSuceava a {
+  color: #416810;
+  border-color: #415347;
+}
+
+.adStiriSuceava a:hover {
+  color: #416810;
+}
+
 @media screen and (max-width: 700px) {
   .article-image {
     width: 45vw;
