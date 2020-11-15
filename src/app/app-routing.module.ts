@@ -11,26 +11,26 @@ import {ContactComponent} from './contact/contact.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent, data: {
-      title: 'Știri Suceava - Aici găsești toate știrile din Suceava!',
-      description: 'Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
-      ogTitle: 'Știri Suceava - Aici găsești toate știrile din Suceava!',
-      ogDescription: 'Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
+      title: 'Stiri Suceava - Aici găsești toate știrile din Suceava!',
+      description: 'stirisuceava.ro - Stiri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
+      ogTitle: 'Stiri Suceava - Aici găsești toate știrile din Suceava!',
+      ogDescription: 'stirisuceava.ro - Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
       ogImage: 'https://img.svnews.ro/foto/2019/05/30/178716/7616d53af9fe552162181fb95.jpg'
     }},
   {path: 'login-admin', component: LoginAdminComponent, canActivate: [LoginGuardService]},
   {path: 'admin-panel', component: AdminPanelComponent, canActivate: [AuthGuardService]},
   {path: 'articol/:id', component: ArticlePageComponent, data: {
-      title: 'Știri Suceava - Aici găsești toate știrile din Suceava!',
-      description: 'Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
-      ogTitle: 'Știri Suceava - Aici găsești toate știrile din Suceava!',
-      ogDescription: 'Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
+      title: 'Stiri Suceava - Aici găsești toate știrile din Suceava!',
+      description: 'stirisuceava.ro - Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
+      ogTitle: 'Stiri Suceava - Aici găsești toate știrile din Suceava!',
+      ogDescription: 'stirisuceava.ro - Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
       ogImage: 'https://img.svnews.ro/foto/2019/05/30/178716/7616d53af9fe552162181fb95.jpg'
     }},
   {path: 'contact', component: ContactComponent, data: {
-      title: 'Știri Suceava - Contact',
-      description: 'Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
-      ogTitle: 'Știri Suceava - Contact',
-      ogDescription: 'Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
+      title: 'Stiri Suceava - Contact',
+      description: 'stirisuceava.ro - Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
+      ogTitle: 'Stiri Suceava - Contact',
+      ogDescription: 'stirisuceava.ro - Știri Suceava este o platformă de știri prin care poți accesa toate știrile din județul Suceava. Cu ajutorul algoritmilor de filtrare a știrilor făcut de echipa noastră, platforma oferă știri verificate.',
       ogImage: 'https://img.svnews.ro/foto/2019/05/30/178716/7616d53af9fe552162181fb95.jpg'
     }},
   {path: '**', redirectTo: ''}
