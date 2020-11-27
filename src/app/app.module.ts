@@ -16,6 +16,8 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
 import {MatCardModule} from "@angular/material/card";
 import { FooterComponent } from './footer/footer.component';
 import { AlertComponent } from './alert/alert.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,16 @@ import { AlertComponent } from './alert/alert.component';
     FooterComponent,
     AlertComponent
   ],
-    imports: [
-        BrowserModule.withServerTransition({ appId: 'stirisuceava-fe' }),
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        MatCardModule
-    ],
+  imports: [
+    BrowserModule.withServerTransition({appId: 'stirisuceava-fe'}),
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatTableModule
+  ],
   providers: [CookieService],
   bootstrap: [AppComponent]
 })

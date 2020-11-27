@@ -5,7 +5,14 @@
   <div class="favicon offset-sm-0 offset-md-2 col-sm-12 col-md-1">
     <img src="./assets/favicon.png" />
   </div>
-  <div class="quote col-sm-12 col-md-4">
+  <div *ngIf="!logOut" class="quote col-sm-12 col-md-4">
     <h1>Aici găsești toate știrile din Suceava!</h1>
+  </div>
+
+  <div *ngIf="logOut" class="buttons-panel col-sm-12 col-md-4">
+    <button class="btn btn-success" (click)="authService.scrape()">Scrape articles</button>
+    <button class="btn btn-danger" (dblclick)="authService.deleteAll()"
+            (click)="alertService.setAlert('info', 'You must double click Delete all button.')">Delete all articles!</button>
+    <button class="btn btn-danger" (click)="authService.logout()">Log out!</button>
   </div>
 </nav>
